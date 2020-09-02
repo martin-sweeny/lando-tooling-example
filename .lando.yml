@@ -1,0 +1,20 @@
+name: example
+recipe: mean
+
+tooling:
+  script:
+    service: appserver
+    level: app
+    cmd: ./script
+    options:
+      opt:
+        describe: This is a useful description
+        alias:
+          - o
+        interactive:
+          default: bananas
+          message: What is the king of fruits?
+          type: list
+          choices:
+            - bananas
+            - pineapples
